@@ -7,6 +7,7 @@ app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 const { request } = require('undici');
 
+const port = process.env.PORT || 8000
 app.use(cors({
     origin:'http://localhost:8000',
     origin:true,
@@ -71,6 +72,6 @@ app.get('/save',(req,res)=>{
     })
 })
 
-app.listen(8000,()=>{
-    console.log('connect');
+app.listen(port,()=>{
+    console.log(`running on ${port}`);
 })
