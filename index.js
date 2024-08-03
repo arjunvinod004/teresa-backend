@@ -99,7 +99,9 @@ app.get('/shipping',(req,res)=>{
 
 app.get('/save',(req,res)=>{
     const {PrmCmpId,PrmBrId,PrmName,PrmKycNo,PrmAddress,PrmCAddress,PrmIsIndian, PrmCountryId, PrmIsAbroad,PrmDueDate,PrmMobileNo,PrmPhoneNo,PrmEmail,PrmOccupation,PrmFunctionId,PrmOtherFunction,PrmDressTypeId,PrmDob,PrmContactTime,PrmSecondName,PrmRefferenceId,PrmShippingId}=req.body
-
+ const url=`https://coinoneglobal.in/teresa_trial/WebOnlineCustomer.asmx/FnSaveCustomer?PrmId=0&PrmCmpId=${req.query.PrmCmpId}&PrmBrId=${req.query.PrmBrId}&PrmName=${req.query.PrmName}&PrmKycNo=${req.query.PrmKycNo}&PrmGender=&PrmPAddress=${req.query.PrmAddress}&PrmCAddress=${req.query.PrmCAddress}&PrmIsIndian=${req.query.PrmIsIndian}&PrmCountryId=${req.query.PrmCountryId}&PrmIsAbroad=${req.query.PrmIsAbroad}&PrmDueDate=${req.query.PrmDueDate}&PrmMobNo=${req.query.PrmMobileNo}&PrmPhoneNo=${req.query.PrmPhoneNo}&PrmEmail=${req.query.PrmEmail}&PrmOccupation=${req.query.PrmOccupation}&PrmFunctionId=${req.query.PrmFunctionId}&PrmOtherFunction=${req.query.PrmOtherFunction}&PrmDressTypeId=${req.query.PrmDressTypeId}&PrmDob=${req.query.PrmDob}&PrmProfileImage=&PrmContactTime=${req.query.PrmContactTime}&PrmIsCourier=false&PrmRemarks=&PrmSecondName=${req.query.PrmSecondName}&PrmRefferenceId=${req.query.PrmRefferenceId}&PrmShippingId=${req.query.PrmShippingId}`
+ console.log(url);
+ 
     
 
     
