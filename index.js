@@ -3,7 +3,7 @@ const nodemon= require('nodemon')
 const cors= require('cors');
 const { log } = require('console');
 const app= express();
-app.use(express.urlencoded({ extended: false }));
+app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
 const port = process.env.PORT || 8000
@@ -114,6 +114,7 @@ app.get('/save',(req,res)=>{
         console.log(response);
 
         })
+        
 })
 
 app.listen(port,()=>{
